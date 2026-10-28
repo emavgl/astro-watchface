@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="watch_face_name">Zweites Gesicht</string>
+    <string name="background_label">Background</string>
+    <string name="background_navy">Navy</string>
+    <string name="background_navy_sparse">Navy sparse</string>
+    <string name="background_dark">Dark</string>
+    <string name="background_dark_sparse">Dark sparse</string>
+    <string name="background_dynamic">Milky Way (random tile)</string>
+    <string name="interval_label">Milky Way: change every</string>
+    <string name="interval_5">5 minutes</string>
+    <string name="interval_10">10 minutes</string>
+    <string name="interval_15">15 minutes</string>
+    <string name="interval_30">30 minutes</string>
+    <string name="interval_60">1 hour</string>
+    <string name="tick_style_label">Tick style</string>
+    <string name="tick_style_sternglas">Sternglas</string>
+    <string name="tick_style_classic">Classic</string>
+    <string name="tick_style_minimal">Minimal</string>
 </resources>
