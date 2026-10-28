@@ -20,7 +20,7 @@ NUM_R = 154 * SS
 NUM_SIZE = 27.5 * SS
 BRAND_Y = 171 * SS
 SUB_Y = 190 * SS
-DATE_Y = 322 * SS
+DATE_Y = 332 * SS
 
 
 def font(name, size):

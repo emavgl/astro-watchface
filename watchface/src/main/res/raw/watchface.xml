@@ -54,7 +54,7 @@
             <Image resource="center" />
         </PartImage>
 
-        <ComplicationSlot x="203" y="302" width="44" height="40" slotId="dateText"
+        <ComplicationSlot x="203" y="312" width="44" height="40" slotId="dateText"
             displayName="Date" supportedTypes="SHORT_TEXT EMPTY">
             <BoundingBox x="0" y="0" width="44" height="40" />
             <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
