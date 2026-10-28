@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WatchFace width="450" height="450" clipShape="CIRCLE">
+    <Scene backgroundColor="#000000">
+        <PartImage x="0" y="0" width="450" height="450" name="dial">
+            <Image resource="dial" />
+        </PartImage>
+
+        <ComplicationSlot x="115" y="156" width="220" height="44" slotId="centerText"
+            displayName="Center text" supportedTypes="SHORT_TEXT EMPTY">
+            <BoundingBox x="0" y="0" width="220" height="44" />
+            <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+            <Complication type="SHORT_TEXT">
+                <Condition>
+                    <Expressions>
+                        <Expression name="hasText"><![CDATA[[COMPLICATION.TEXT] != null]]></Expression>
+                        <Expression name="hasTitle"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+                    </Expressions>
+                    <Compare expression="hasText">
+                        <PartText x="0" y="0" width="220" height="44">
+                            <Text align="CENTER" ellipsis="TRUE">
+                                <Font family="jost_light" size="27.5" color="#E8EAEE">
+                                    <Template>
+                                        <![CDATA[%s]]>
+                                        <Parameter expression="[COMPLICATION.TEXT]" />
+                                    </Template>
+                                </Font>
+                            </Text>
+                        </PartText>
+                    </Compare>
+                    <Compare expression="hasTitle">
+                        <PartText x="0" y="0" width="220" height="44">
+                            <Text align="CENTER" ellipsis="TRUE">
+                                <Font family="jost_light" size="27.5" color="#E8EAEE">
+                                    <Template>
+                                        <![CDATA[%s]]>
+                                        <Parameter expression="[COMPLICATION.TITLE]" />
+                                    </Template>
+                                </Font>
+                            </Text>
+                        </PartText>
+                    </Compare>
+                </Condition>
+            </Complication>
+        </ComplicationSlot>
+
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand resource="hand_hour" x="0" y="0" width="450" height="450"
+                pivotX="0.5" pivotY="0.5" />
+            <MinuteHand resource="hand_minute" x="0" y="0" width="450" height="450"
+                pivotX="0.5" pivotY="0.5" />
+        </AnalogClock>
+
+        <PartImage x="0" y="0" width="450" height="450" name="center">
+            <Image resource="center" />
+        </PartImage>
+
+        <ComplicationSlot x="203" y="302" width="44" height="40" slotId="dateText"
+            displayName="Date" supportedTypes="SHORT_TEXT EMPTY">
+            <BoundingBox x="0" y="0" width="44" height="40" />
+            <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
+            <Complication type="EMPTY">
+                <PartText x="0" y="0" width="44" height="40">
+                    <Text align="CENTER">
+                        <Font family="jost_light" size="27.5" color="#F2F4F7">
+                            <Template>
+                                <![CDATA[%d]]>
+                                <Parameter expression="[DAY]" />
+                            </Template>
+                        </Font>
+                    </Text>
+                </PartText>
+            </Complication>
+            <Complication type="SHORT_TEXT">
+                <Condition>
+                    <Expressions>
+                        <Expression name="hasText"><![CDATA[[COMPLICATION.TEXT] != null]]></Expression>
+                        <Expression name="hasTitle"><![CDATA[[COMPLICATION.TITLE] != null]]></Expression>
+                    </Expressions>
+                    <Compare expression="hasText">
+                        <PartText x="0" y="0" width="44" height="40">
+                            <Text align="CENTER" ellipsis="TRUE">
+                                <Font family="jost_light" size="27.5" color="#F2F4F7">
+                                    <Template>
+                                        <![CDATA[%s]]>
+                                        <Parameter expression="[COMPLICATION.TEXT]" />
+                                    </Template>
+                                </Font>
+                            </Text>
+                        </PartText>
+                    </Compare>
+                    <Compare expression="hasTitle">
+                        <PartText x="0" y="0" width="44" height="40">
+                            <Text align="CENTER" ellipsis="TRUE">
+                                <Font family="jost_light" size="27.5" color="#F2F4F7">
+                                    <Template>
+                                        <![CDATA[%s]]>
+                                        <Parameter expression="[COMPLICATION.TITLE]" />
+                                    </Template>
+                                </Font>
+                            </Text>
+                        </PartText>
+                    </Compare>
+                </Condition>
+            </Complication>
+        </ComplicationSlot>
+    </Scene>
+</WatchFace>
