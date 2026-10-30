@@ -1,0 +1,26 @@
+Galassia is a minimal analog watch face for Wear OS with a real Milky Way panorama behind the dial.
+
+The background is built from 32 tiles of the night sky and changes every 30 minutes, so your watch slowly drifts through the galaxy instead of showing the same static image.
+
+FEATURES
+• Real Milky Way photography, refreshed every 30 minutes
+• Minimal analog dial with a vintage-inspired layout
+• Three tick styles: Sternglas, Classic and Minimal
+• Date complication
+• Center text complication
+• Designed for round Wear OS watches and AMOLED displays
+
+COMPATIBILITY
+• Wear OS 4 and newer (API 33+)
+• Samsung Galaxy Watch 4 and newer
+• Google Pixel Watch and other round Wear OS watches
+
+INSTALLATION
+1. Install Galassia from Google Play on your watch.
+2. Long-press your current watch face.
+3. Select Galassia from the watch face picker.
+4. Tap Customize to choose a tick style or edit complications.
+
+Galassia is built with the Watch Face Format for smooth performance and efficient ambient mode.
+
+This is an independent watch face. Galaxy Watch and Pixel Watch are trademarks of their respective owners.

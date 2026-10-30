@@ -1,0 +1,45 @@
+default_platform(:android)
+
+ROOT = File.expand_path("..", __dir__)
+METADATA = File.expand_path("metadata/android", __dir__)
+AAB = File.join(ROOT, "watchface/build/outputs/bundle/release/watchface-release.aab")
+
+def json_key
+  ENV["SUPPLY_JSON_KEY"] || File.expand_path("play-store-key.json", __dir__)
+end
+
+platform :android do
+  desc "Generate Play Store screenshots and artwork"
+  lane :screenshots do
+    Dir.chdir(ROOT) { sh("python3", "tools/render_screenshots.py") }
+  end
+
+  desc "Build the release App Bundle"
+  lane :build do
+    Dir.chdir(ROOT) { sh("./gradlew", ":watchface:bundleRelease") }
+  end
+
+  desc "Upload listing metadata, images and screenshots"
+  lane :metadata do
+    supply(
+      package_name: "dev.astro.watchface",
+      json_key: json_key,
+      metadata_path: METADATA,
+      skip_upload_aab: true,
+      skip_upload_apk: true
+    )
+  end
+
+  desc "Build and upload a new release to the internal track"
+  lane :deploy do
+    build
+    supply(
+      package_name: "dev.astro.watchface",
+      json_key: json_key,
+      aab: AAB,
+      metadata_path: METADATA,
+      track: ENV.fetch("SUPPLY_TRACK", "internal"),
+      skip_upload_apk: true
+    )
+  end
+end

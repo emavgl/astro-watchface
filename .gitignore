@@ -10,3 +10,11 @@ captures/
 *.jks
 .env
 .vscode/
+fastlane/play-store-key.json
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+.bundle/
+vendor/bundle/
+__pycache__/
+*.pyc

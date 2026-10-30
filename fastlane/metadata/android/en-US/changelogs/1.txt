@@ -1,0 +1,1 @@
+Initial release: a minimal analog watch face with a real Milky Way background that changes every 30 minutes.

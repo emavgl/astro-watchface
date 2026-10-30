@@ -1,0 +1,2 @@
+json_key_file(ENV["SUPPLY_JSON_KEY"] || File.expand_path("play-store-key.json", __dir__))
+package_name("dev.astro.watchface")

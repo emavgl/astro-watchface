@@ -1,0 +1,1 @@
+Minimal analog watch face with a real Milky Way sky, refreshed every 30 min.
