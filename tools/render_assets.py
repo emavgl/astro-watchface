@@ -478,7 +478,11 @@ def main():
         assets.append((f"ticks_{style}", fn()))
 
     default_ticks = TICK_STYLES["sternglas"]()
-    preview = composite_preview(dials["navy"], default_ticks, hour, minute, cap)
+    frame = build_frame()
+    tiles = build_tiles()
+    preview_dial = tiles[12].convert("RGBA").resize((PX, PX), Image.LANCZOS)
+    preview_dial.alpha_composite(frame)
+    preview = composite_preview(preview_dial, default_ticks, hour, minute, cap)
     assets.append(("preview", preview))
 
     # The single-background "dial" asset is replaced by dial_<background>.
@@ -486,11 +490,10 @@ def main():
     if stale.exists():
         stale.unlink()
 
-    assets.append(("dial_frame", build_frame()))
+    assets.append(("dial_frame", frame))
     for name, im in assets:
         im.resize((W, W), Image.LANCZOS).save(RES / f"{name}.png", optimize=True)
 
-    tiles = build_tiles()
     for i, tile in enumerate(tiles):
         tile.resize((W, W), Image.LANCZOS).save(RES / f"bg_tile_{i:02d}.jpg", quality=92)
 

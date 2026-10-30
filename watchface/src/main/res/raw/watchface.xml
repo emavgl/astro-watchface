@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WatchFace width="450" height="450" clipShape="CIRCLE">
     <UserConfigurations>
-        <ListConfiguration id="background" displayName="background_label" defaultValue="0">
-            <ListOption id="0" displayName="background_navy" />
-            <ListOption id="1" displayName="background_navy_sparse" />
-            <ListOption id="2" displayName="background_dark" />
-            <ListOption id="3" displayName="background_dark_sparse" />
-            <ListOption id="4" displayName="background_dynamic" />
-        </ListConfiguration>
-        <ListConfiguration id="dynamicInterval" displayName="interval_label" defaultValue="1">
-            <ListOption id="0" displayName="interval_5" />
-            <ListOption id="1" displayName="interval_10" />
-            <ListOption id="2" displayName="interval_15" />
-            <ListOption id="3" displayName="interval_30" />
-            <ListOption id="4" displayName="interval_60" />
-        </ListConfiguration>
         <ListConfiguration id="tickStyle" displayName="tick_style_label" defaultValue="0">
             <ListOption id="0" displayName="tick_style_sternglas" />
             <ListOption id="1" displayName="tick_style_classic" />
@@ -23,1646 +9,326 @@
     </UserConfigurations>
 
     <Scene backgroundColor="#000000">
-        <ListConfiguration id="dynamicInterval">
-            <ListOption id="0">
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile0"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile0">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
-                            <Image resource="bg_tile_00" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile1"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile1">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
-                            <Image resource="bg_tile_01" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile2"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile2">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
-                            <Image resource="bg_tile_02" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile3"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile3">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
-                            <Image resource="bg_tile_03" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile4"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile4">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
-                            <Image resource="bg_tile_04" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile5"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile5">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
-                            <Image resource="bg_tile_05" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile6"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile6">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
-                            <Image resource="bg_tile_06" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile7"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile7">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
-                            <Image resource="bg_tile_07" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile8"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile8">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
-                            <Image resource="bg_tile_08" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile9"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile9">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
-                            <Image resource="bg_tile_09" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile10"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile10">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
-                            <Image resource="bg_tile_10" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile11"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile11">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
-                            <Image resource="bg_tile_11" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile12"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile12">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
-                            <Image resource="bg_tile_12" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile13"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile13">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
-                            <Image resource="bg_tile_13" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile14"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile14">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
-                            <Image resource="bg_tile_14" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile15"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile15">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
-                            <Image resource="bg_tile_15" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile16"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile16">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
-                            <Image resource="bg_tile_16" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile17"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile17">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
-                            <Image resource="bg_tile_17" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile18"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile18">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
-                            <Image resource="bg_tile_18" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile19"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile19">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
-                            <Image resource="bg_tile_19" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile20"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile20">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
-                            <Image resource="bg_tile_20" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile21"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile21">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
-                            <Image resource="bg_tile_21" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile22"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile22">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
-                            <Image resource="bg_tile_22" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile23"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile23">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
-                            <Image resource="bg_tile_23" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile24"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile24">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
-                            <Image resource="bg_tile_24" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile25"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile25">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
-                            <Image resource="bg_tile_25" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile26"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile26">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
-                            <Image resource="bg_tile_26" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile27"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile27">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
-                            <Image resource="bg_tile_27" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile28"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile28">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
-                            <Image resource="bg_tile_28" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile29"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile29">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
-                            <Image resource="bg_tile_29" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile30"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile30">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
-                            <Image resource="bg_tile_30" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile31"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 300000) - floor(floor([UTC_TIMESTAMP] / 300000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile31">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
-                            <Image resource="bg_tile_31" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-            </ListOption>
-            <ListOption id="1">
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile0"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile0">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
-                            <Image resource="bg_tile_00" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile1"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile1">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
-                            <Image resource="bg_tile_01" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile2"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile2">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
-                            <Image resource="bg_tile_02" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile3"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile3">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
-                            <Image resource="bg_tile_03" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile4"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile4">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
-                            <Image resource="bg_tile_04" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile5"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile5">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
-                            <Image resource="bg_tile_05" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile6"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile6">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
-                            <Image resource="bg_tile_06" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile7"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile7">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
-                            <Image resource="bg_tile_07" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile8"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile8">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
-                            <Image resource="bg_tile_08" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile9"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile9">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
-                            <Image resource="bg_tile_09" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile10"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile10">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
-                            <Image resource="bg_tile_10" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile11"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile11">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
-                            <Image resource="bg_tile_11" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile12"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile12">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
-                            <Image resource="bg_tile_12" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile13"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile13">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
-                            <Image resource="bg_tile_13" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile14"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile14">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
-                            <Image resource="bg_tile_14" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile15"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile15">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
-                            <Image resource="bg_tile_15" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile16"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile16">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
-                            <Image resource="bg_tile_16" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile17"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile17">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
-                            <Image resource="bg_tile_17" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile18"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile18">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
-                            <Image resource="bg_tile_18" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile19"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile19">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
-                            <Image resource="bg_tile_19" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile20"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile20">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
-                            <Image resource="bg_tile_20" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile21"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile21">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
-                            <Image resource="bg_tile_21" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile22"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile22">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
-                            <Image resource="bg_tile_22" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile23"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile23">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
-                            <Image resource="bg_tile_23" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile24"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile24">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
-                            <Image resource="bg_tile_24" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile25"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile25">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
-                            <Image resource="bg_tile_25" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile26"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile26">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
-                            <Image resource="bg_tile_26" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile27"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile27">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
-                            <Image resource="bg_tile_27" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile28"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile28">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
-                            <Image resource="bg_tile_28" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile29"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile29">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
-                            <Image resource="bg_tile_29" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile30"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile30">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
-                            <Image resource="bg_tile_30" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile31"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 600000) - floor(floor([UTC_TIMESTAMP] / 600000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile31">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
-                            <Image resource="bg_tile_31" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-            </ListOption>
-            <ListOption id="2">
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile0"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile0">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
-                            <Image resource="bg_tile_00" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile1"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile1">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
-                            <Image resource="bg_tile_01" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile2"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile2">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
-                            <Image resource="bg_tile_02" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile3"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile3">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
-                            <Image resource="bg_tile_03" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile4"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile4">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
-                            <Image resource="bg_tile_04" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile5"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile5">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
-                            <Image resource="bg_tile_05" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile6"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile6">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
-                            <Image resource="bg_tile_06" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile7"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile7">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
-                            <Image resource="bg_tile_07" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile8"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile8">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
-                            <Image resource="bg_tile_08" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile9"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile9">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
-                            <Image resource="bg_tile_09" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile10"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile10">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
-                            <Image resource="bg_tile_10" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile11"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile11">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
-                            <Image resource="bg_tile_11" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile12"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile12">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
-                            <Image resource="bg_tile_12" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile13"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile13">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
-                            <Image resource="bg_tile_13" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile14"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile14">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
-                            <Image resource="bg_tile_14" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile15"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile15">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
-                            <Image resource="bg_tile_15" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile16"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile16">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
-                            <Image resource="bg_tile_16" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile17"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile17">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
-                            <Image resource="bg_tile_17" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile18"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile18">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
-                            <Image resource="bg_tile_18" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile19"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile19">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
-                            <Image resource="bg_tile_19" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile20"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile20">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
-                            <Image resource="bg_tile_20" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile21"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile21">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
-                            <Image resource="bg_tile_21" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile22"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile22">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
-                            <Image resource="bg_tile_22" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile23"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile23">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
-                            <Image resource="bg_tile_23" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile24"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile24">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
-                            <Image resource="bg_tile_24" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile25"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile25">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
-                            <Image resource="bg_tile_25" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile26"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile26">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
-                            <Image resource="bg_tile_26" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile27"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile27">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
-                            <Image resource="bg_tile_27" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile28"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile28">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
-                            <Image resource="bg_tile_28" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile29"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile29">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
-                            <Image resource="bg_tile_29" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile30"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile30">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
-                            <Image resource="bg_tile_30" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile31"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 900000) - floor(floor([UTC_TIMESTAMP] / 900000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile31">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
-                            <Image resource="bg_tile_31" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-            </ListOption>
-            <ListOption id="3">
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile0"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile0">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
-                            <Image resource="bg_tile_00" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile1"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile1">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
-                            <Image resource="bg_tile_01" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile2"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile2">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
-                            <Image resource="bg_tile_02" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile3"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile3">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
-                            <Image resource="bg_tile_03" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile4"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile4">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
-                            <Image resource="bg_tile_04" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile5"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile5">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
-                            <Image resource="bg_tile_05" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile6"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile6">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
-                            <Image resource="bg_tile_06" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile7"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile7">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
-                            <Image resource="bg_tile_07" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile8"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile8">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
-                            <Image resource="bg_tile_08" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile9"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile9">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
-                            <Image resource="bg_tile_09" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile10"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile10">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
-                            <Image resource="bg_tile_10" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile11"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile11">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
-                            <Image resource="bg_tile_11" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile12"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile12">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
-                            <Image resource="bg_tile_12" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile13"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile13">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
-                            <Image resource="bg_tile_13" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile14"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile14">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
-                            <Image resource="bg_tile_14" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile15"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile15">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
-                            <Image resource="bg_tile_15" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile16"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile16">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
-                            <Image resource="bg_tile_16" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile17"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile17">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
-                            <Image resource="bg_tile_17" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile18"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile18">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
-                            <Image resource="bg_tile_18" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile19"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile19">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
-                            <Image resource="bg_tile_19" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile20"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile20">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
-                            <Image resource="bg_tile_20" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile21"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile21">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
-                            <Image resource="bg_tile_21" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile22"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile22">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
-                            <Image resource="bg_tile_22" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile23"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile23">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
-                            <Image resource="bg_tile_23" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile24"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile24">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
-                            <Image resource="bg_tile_24" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile25"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile25">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
-                            <Image resource="bg_tile_25" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile26"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile26">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
-                            <Image resource="bg_tile_26" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile27"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile27">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
-                            <Image resource="bg_tile_27" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile28"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile28">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
-                            <Image resource="bg_tile_28" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile29"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile29">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
-                            <Image resource="bg_tile_29" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile30"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile30">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
-                            <Image resource="bg_tile_30" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile31"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile31">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
-                            <Image resource="bg_tile_31" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-            </ListOption>
-            <ListOption id="4">
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile0"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile0">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
-                            <Image resource="bg_tile_00" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile1"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile1">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
-                            <Image resource="bg_tile_01" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile2"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile2">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
-                            <Image resource="bg_tile_02" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile3"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile3">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
-                            <Image resource="bg_tile_03" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile4"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile4">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
-                            <Image resource="bg_tile_04" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile5"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile5">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
-                            <Image resource="bg_tile_05" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile6"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile6">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
-                            <Image resource="bg_tile_06" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile7"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile7">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
-                            <Image resource="bg_tile_07" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile8"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile8">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
-                            <Image resource="bg_tile_08" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile9"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile9">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
-                            <Image resource="bg_tile_09" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile10"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile10">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
-                            <Image resource="bg_tile_10" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile11"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile11">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
-                            <Image resource="bg_tile_11" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile12"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile12">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
-                            <Image resource="bg_tile_12" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile13"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile13">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
-                            <Image resource="bg_tile_13" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile14"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile14">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
-                            <Image resource="bg_tile_14" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile15"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile15">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
-                            <Image resource="bg_tile_15" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile16"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile16">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
-                            <Image resource="bg_tile_16" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile17"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile17">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
-                            <Image resource="bg_tile_17" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile18"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile18">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
-                            <Image resource="bg_tile_18" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile19"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile19">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
-                            <Image resource="bg_tile_19" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile20"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile20">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
-                            <Image resource="bg_tile_20" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile21"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile21">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
-                            <Image resource="bg_tile_21" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile22"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile22">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
-                            <Image resource="bg_tile_22" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile23"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile23">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
-                            <Image resource="bg_tile_23" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile24"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile24">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
-                            <Image resource="bg_tile_24" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile25"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile25">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
-                            <Image resource="bg_tile_25" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile26"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile26">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
-                            <Image resource="bg_tile_26" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile27"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile27">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
-                            <Image resource="bg_tile_27" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile28"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile28">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
-                            <Image resource="bg_tile_28" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile29"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile29">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
-                            <Image resource="bg_tile_29" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile30"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile30">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
-                            <Image resource="bg_tile_30" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-                <Condition>
-                    <Expressions>
-                        <Expression name="tile31"><![CDATA[[CONFIGURATION.background] == "4" && floor(fract((floor([UTC_TIMESTAMP] / 3600000) - floor(floor([UTC_TIMESTAMP] / 3600000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
-                    </Expressions>
-                    <Compare expression="tile31">
-                        <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
-                            <Image resource="bg_tile_31" />
-                        </PartImage>
-                    </Compare>
-                </Condition>
-            </ListOption>
-        </ListConfiguration>
-
-        <ListConfiguration id="background">
-            <ListOption id="0">
-                <PartImage x="0" y="0" width="450" height="450" name="dial_navy">
-                    <Image resource="dial_navy" />
+        <Condition>
+            <Expressions>
+                <Expression name="tile0"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 0]]></Expression>
+            </Expressions>
+            <Compare expression="tile0">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_00">
+                    <Image resource="bg_tile_00" />
                 </PartImage>
-            </ListOption>
-            <ListOption id="1">
-                <PartImage x="0" y="0" width="450" height="450" name="dial_navy_sparse">
-                    <Image resource="dial_navy_sparse" />
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile1"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 1]]></Expression>
+            </Expressions>
+            <Compare expression="tile1">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_01">
+                    <Image resource="bg_tile_01" />
                 </PartImage>
-            </ListOption>
-            <ListOption id="2">
-                <PartImage x="0" y="0" width="450" height="450" name="dial_dark">
-                    <Image resource="dial_dark" />
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile2"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 2]]></Expression>
+            </Expressions>
+            <Compare expression="tile2">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_02">
+                    <Image resource="bg_tile_02" />
                 </PartImage>
-            </ListOption>
-            <ListOption id="3">
-                <PartImage x="0" y="0" width="450" height="450" name="dial_dark_sparse">
-                    <Image resource="dial_dark_sparse" />
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile3"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 3]]></Expression>
+            </Expressions>
+            <Compare expression="tile3">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_03">
+                    <Image resource="bg_tile_03" />
                 </PartImage>
-            </ListOption>
-            <ListOption id="4">
-                <PartImage x="0" y="0" width="450" height="450" name="dial_frame">
-                    <Image resource="dial_frame" />
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile4"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 4]]></Expression>
+            </Expressions>
+            <Compare expression="tile4">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_04">
+                    <Image resource="bg_tile_04" />
                 </PartImage>
-            </ListOption>
-        </ListConfiguration>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile5"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 5]]></Expression>
+            </Expressions>
+            <Compare expression="tile5">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_05">
+                    <Image resource="bg_tile_05" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile6"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 6]]></Expression>
+            </Expressions>
+            <Compare expression="tile6">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_06">
+                    <Image resource="bg_tile_06" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile7"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 7]]></Expression>
+            </Expressions>
+            <Compare expression="tile7">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_07">
+                    <Image resource="bg_tile_07" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile8"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 8]]></Expression>
+            </Expressions>
+            <Compare expression="tile8">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_08">
+                    <Image resource="bg_tile_08" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile9"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 9]]></Expression>
+            </Expressions>
+            <Compare expression="tile9">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_09">
+                    <Image resource="bg_tile_09" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile10"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 10]]></Expression>
+            </Expressions>
+            <Compare expression="tile10">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_10">
+                    <Image resource="bg_tile_10" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile11"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 11]]></Expression>
+            </Expressions>
+            <Compare expression="tile11">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_11">
+                    <Image resource="bg_tile_11" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile12"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 12]]></Expression>
+            </Expressions>
+            <Compare expression="tile12">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_12">
+                    <Image resource="bg_tile_12" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile13"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 13]]></Expression>
+            </Expressions>
+            <Compare expression="tile13">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_13">
+                    <Image resource="bg_tile_13" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile14"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 14]]></Expression>
+            </Expressions>
+            <Compare expression="tile14">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_14">
+                    <Image resource="bg_tile_14" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile15"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 15]]></Expression>
+            </Expressions>
+            <Compare expression="tile15">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_15">
+                    <Image resource="bg_tile_15" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile16"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 16]]></Expression>
+            </Expressions>
+            <Compare expression="tile16">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_16">
+                    <Image resource="bg_tile_16" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile17"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 17]]></Expression>
+            </Expressions>
+            <Compare expression="tile17">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_17">
+                    <Image resource="bg_tile_17" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile18"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 18]]></Expression>
+            </Expressions>
+            <Compare expression="tile18">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_18">
+                    <Image resource="bg_tile_18" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile19"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 19]]></Expression>
+            </Expressions>
+            <Compare expression="tile19">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_19">
+                    <Image resource="bg_tile_19" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile20"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 20]]></Expression>
+            </Expressions>
+            <Compare expression="tile20">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_20">
+                    <Image resource="bg_tile_20" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile21"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 21]]></Expression>
+            </Expressions>
+            <Compare expression="tile21">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_21">
+                    <Image resource="bg_tile_21" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile22"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 22]]></Expression>
+            </Expressions>
+            <Compare expression="tile22">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_22">
+                    <Image resource="bg_tile_22" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile23"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 23]]></Expression>
+            </Expressions>
+            <Compare expression="tile23">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_23">
+                    <Image resource="bg_tile_23" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile24"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 24]]></Expression>
+            </Expressions>
+            <Compare expression="tile24">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_24">
+                    <Image resource="bg_tile_24" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile25"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 25]]></Expression>
+            </Expressions>
+            <Compare expression="tile25">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_25">
+                    <Image resource="bg_tile_25" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile26"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 26]]></Expression>
+            </Expressions>
+            <Compare expression="tile26">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_26">
+                    <Image resource="bg_tile_26" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile27"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 27]]></Expression>
+            </Expressions>
+            <Compare expression="tile27">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_27">
+                    <Image resource="bg_tile_27" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile28"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 28]]></Expression>
+            </Expressions>
+            <Compare expression="tile28">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_28">
+                    <Image resource="bg_tile_28" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile29"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 29]]></Expression>
+            </Expressions>
+            <Compare expression="tile29">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_29">
+                    <Image resource="bg_tile_29" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile30"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 30]]></Expression>
+            </Expressions>
+            <Compare expression="tile30">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_30">
+                    <Image resource="bg_tile_30" />
+                </PartImage>
+            </Compare>
+        </Condition>
+        <Condition>
+            <Expressions>
+                <Expression name="tile31"><![CDATA[floor(fract((floor([UTC_TIMESTAMP] / 1800000) - floor(floor([UTC_TIMESTAMP] / 1800000) / 1000) * 1000) * 0.6180339887) * 32) == 31]]></Expression>
+            </Expressions>
+            <Compare expression="tile31">
+                <PartImage x="0" y="0" width="450" height="450" name="bg_tile_31">
+                    <Image resource="bg_tile_31" />
+                </PartImage>
+            </Compare>
+        </Condition>
 
         <ListConfiguration id="tickStyle">
             <ListOption id="0">
