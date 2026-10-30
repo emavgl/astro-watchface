@@ -8,6 +8,9 @@ local.properties
 captures/
 *.keystore
 *.jks
+keystore.properties
+keystore/
+dist/
 .env
 .vscode/
 fastlane/play-store-key.json
