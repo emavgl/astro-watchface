@@ -83,8 +83,19 @@ def write_screenshots():
 
 
 def write_icon():
-    face = compose(12, "sternglas", 10, 10, "14").resize((512, 512), Image.LANCZOS)
-    face.convert("RGB").save(OUT / "icon.png", optimize=True)
+    size = 512
+    face_size = 480
+    background = (
+        Image.open(ra.RES / "bg_tile_12.jpg")
+        .convert("RGB")
+        .resize((size, size), Image.LANCZOS)
+    )
+    background = ImageEnhance.Brightness(background).enhance(0.32)
+    background = background.filter(ImageFilter.GaussianBlur(0.8)).convert("RGBA")
+    face = circular(compose(12, "sternglas", 10, 10, "14"), face_size, 1)
+    offset = (size - face_size) // 2
+    background.alpha_composite(face, (offset, offset))
+    background.convert("RGB").save(OUT / "icon.png", optimize=True)
 
 
 def write_feature_graphic():

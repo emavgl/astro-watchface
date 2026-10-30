@@ -21,3 +21,4 @@ fastlane/screenshots/
 vendor/bundle/
 __pycache__/
 *.pyc
+*.kate-swp
