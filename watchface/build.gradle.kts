@@ -13,12 +13,12 @@ val keystoreProperties = Properties().apply {
 
 android {
     namespace = "dev.astro.watchface"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "dev.astro.watchface"
         minSdk = 33
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
     }
