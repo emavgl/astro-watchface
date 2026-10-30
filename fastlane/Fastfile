@@ -22,7 +22,7 @@ platform :android do
   desc "Upload listing metadata, images and screenshots"
   lane :metadata do
     supply(
-      package_name: "dev.astro.watchface",
+      package_name: "eu.viglianisi.galassia",
       json_key: json_key,
       metadata_path: METADATA,
       skip_upload_aab: true,
@@ -34,7 +34,7 @@ platform :android do
   lane :deploy do
     build
     supply(
-      package_name: "dev.astro.watchface",
+      package_name: "eu.viglianisi.galassia",
       json_key: json_key,
       aab: AAB,
       metadata_path: METADATA,
