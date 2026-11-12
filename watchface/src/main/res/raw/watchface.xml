@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WatchFace width="450" height="450" clipShape="CIRCLE">
     <UserConfigurations>
+        <ListConfiguration id="numeralStyle" displayName="numeral_style_label" defaultValue="1">
+            <ListOption id="0" displayName="numeral_style_none" />
+            <ListOption id="1" displayName="numeral_style_main" />
+            <ListOption id="2" displayName="numeral_style_all" />
+        </ListConfiguration>
         <ListConfiguration id="tickStyle" displayName="tick_style_label" defaultValue="0">
             <ListOption id="0" displayName="tick_style_sternglas" />
             <ListOption id="1" displayName="tick_style_classic" />
@@ -339,6 +344,28 @@
             <Image resource="ambient_stars" />
             <Variant mode="AMBIENT" target="alpha" value="255" />
         </PartImage>
+
+        <PartImage x="0" y="0" width="450" height="450" name="dial_frame">
+            <Image resource="dial_frame" />
+        </PartImage>
+
+        <ListConfiguration id="numeralStyle">
+            <ListOption id="0">
+                <PartImage x="0" y="0" width="450" height="450" name="numerals_none">
+                    <Image resource="numerals_none" />
+                </PartImage>
+            </ListOption>
+            <ListOption id="1">
+                <PartImage x="0" y="0" width="450" height="450" name="numerals_main">
+                    <Image resource="numerals_main" />
+                </PartImage>
+            </ListOption>
+            <ListOption id="2">
+                <PartImage x="0" y="0" width="450" height="450" name="numerals_all">
+                    <Image resource="numerals_all" />
+                </PartImage>
+            </ListOption>
+        </ListConfiguration>
 
         <ListConfiguration id="tickStyle">
             <ListOption id="0">

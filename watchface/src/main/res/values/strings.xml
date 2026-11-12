@@ -5,4 +5,8 @@
     <string name="tick_style_sternglas">Sternglas</string>
     <string name="tick_style_classic">Classic</string>
     <string name="tick_style_minimal">Minimal</string>
+    <string name="numeral_style_label">Numerals</string>
+    <string name="numeral_style_none">None</string>
+    <string name="numeral_style_main">Main (12, 3, 6, 9)</string>
+    <string name="numeral_style_all">All</string>
 </resources>

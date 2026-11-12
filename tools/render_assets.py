@@ -263,11 +263,11 @@ def _tick(d, minute, inner, width, color, alpha, outer=TICK_OUTER):
 
 
 def ticks_sternglas():
-    """Long batons at the odd hours, fine minute ticks everywhere else."""
+    """Long batons at every hour, fine minute ticks everywhere else."""
     layer = Image.new("RGBA", (PX, PX), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     for minute in range(60):
-        if minute % 10 == 5:
+        if minute % 5 == 0:
             _tick(d, minute, TICK_STERN_LONG, 4.0 * SS, (240, 243, 250), 255)
         else:
             _tick(d, minute, TICK_STERN_MIN, 1.8 * SS, (232, 236, 246), 230)
@@ -312,11 +312,18 @@ def centered_text(draw, xy, text, fnt, fill, tracking=0):
     return total
 
 
-def draw_numerals(img):
+# Numeral options selectable on the watch face. Each becomes numerals_<name>.png.
+NUMERAL_STYLES = {
+    "main": (12, 3, 6, 9),
+    "all": tuple(range(1, 13)),
+}
+
+
+def draw_numerals(img, hours=tuple(range(1, 13))):
     layer = Image.new("RGBA", (PX, PX), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
     fnt = font("Jost-380.ttf", NUM_SIZE)
-    for hour in (12, 2, 4, 6, 8, 10):
+    for hour in hours:
         a = math.radians(hour % 12 * 30)
         x = C + math.sin(a) * NUM_R
         y = C - math.cos(a) * NUM_R
@@ -425,13 +432,12 @@ def build_dial(variant):
 
 
 def build_frame():
-    """Transparent overlay with the bezel, numerals and date window.
+    """Transparent overlay with the bezel and date window (numerals are separate).
 
     Used on top of the dynamic background tiles, which carry no frame themselves.
     """
     canvas = Image.new("RGBA", (PX, PX), (0, 0, 0, 0))
     draw_rim(canvas)
-    draw_numerals(canvas)
     draw_date_frame(canvas)
     return canvas
 
@@ -491,6 +497,9 @@ def main():
         stale.unlink()
 
     assets.append(("dial_frame", frame))
+    for style, hours in NUMERAL_STYLES.items():
+        layer = draw_numerals(Image.new("RGBA", (PX, PX), (0, 0, 0, 0)), hours)
+        assets.append((f"numerals_{style}", layer))
     for name, im in assets:
         im.resize((W, W), Image.LANCZOS).save(RES / f"{name}.png", optimize=True)
 
