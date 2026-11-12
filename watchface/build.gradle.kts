@@ -19,8 +19,8 @@ android {
         applicationId = "eu.viglianisi.galassia"
         minSdk = 33
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.0.1"
+        versionCode = 5
+        versionName = "1.0.4"
     }
 
     signingConfigs {

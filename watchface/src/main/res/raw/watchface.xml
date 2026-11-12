@@ -330,6 +330,16 @@
             </Compare>
         </Condition>
 
+        <PartImage x="0" y="0" width="450" height="450" name="ambient_black" alpha="0">
+            <Image resource="ambient_black" />
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+        </PartImage>
+
+        <PartImage x="0" y="0" width="450" height="450" name="ambient_stars" alpha="0">
+            <Image resource="ambient_stars" />
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+        </PartImage>
+
         <ListConfiguration id="tickStyle">
             <ListOption id="0">
                 <PartImage x="0" y="0" width="450" height="450" name="ticks_sternglas">
@@ -400,7 +410,7 @@
         <ComplicationSlot x="203" y="312" width="44" height="40" slotId="dateText"
             displayName="Date" supportedTypes="SHORT_TEXT EMPTY">
             <BoundingBox x="0" y="0" width="44" height="40" />
-            <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
+            <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
             <Complication type="EMPTY">
                 <PartText x="0" y="0" width="44" height="40">
                     <Text align="CENTER">
